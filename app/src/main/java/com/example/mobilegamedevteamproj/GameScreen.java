@@ -17,11 +17,20 @@ public class GameScreen extends View {
     Bitmap background;
     Handler handler;
     Runnable runnable;
+    static int dx,dy;
+    Rect rectangle;
 
     public GameScreen(Context context) {
         super(context);
 
         background = BitmapFactory.decodeResource(getResources(),R.drawable.space);
+
+        Display disp = ((Activity)getContext()).getWindowManager().getDefaultDisplay();
+        Point dimension = new Point();
+        disp.getSize(dimension);
+        dx = dimension.x;
+        dy = dimension.y;
+        rectangle = new Rect(0, 0, dx, dy);
 
         handler = new Handler();
         runnable = new Runnable() {
@@ -36,7 +45,7 @@ public class GameScreen extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawBitmap(background,0,0,null);
+        canvas.drawBitmap(background,null,rectangle,null);
     }
 
 }

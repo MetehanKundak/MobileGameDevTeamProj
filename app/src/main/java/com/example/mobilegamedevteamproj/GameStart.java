@@ -17,13 +17,5 @@ public class GameStart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         gameScreen = new GameScreen(this);
         setContentView(gameScreen);
-
-//        setContentView(R.layout.game_start);
     }
-
-//    public void gameStart(View view){
-//
-//        startActivity(new Intent(this,MainActivity.class));
-//        finish();
-//    }
 }
