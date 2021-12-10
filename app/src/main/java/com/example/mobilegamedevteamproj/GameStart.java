@@ -10,15 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameStart extends AppCompatActivity {
 
+    GameScreen gameScreen;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_start);
+        gameScreen = new GameScreen(this);
+        setContentView(gameScreen);
+
+//        setContentView(R.layout.game_start);
     }
 
-    public void gameStart(View view){
-
-        startActivity(new Intent(this,MainActivity.class));
-        finish();
-    }
+//    public void gameStart(View view){
+//
+//        startActivity(new Intent(this,MainActivity.class));
+//        finish();
+//    }
 }
