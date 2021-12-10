@@ -57,4 +57,23 @@ public class GameScreen extends View {
 
 
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        switch(event.getAction()){
+
+            // If event is Down, control the player ship.
+            case MotionEvent.ACTION_DOWN:
+                playerShip.playerX = (int)event.getX();
+                break;
+
+            // If event is Move, control the player ship with touch.
+            case MotionEvent.ACTION_MOVE:
+                playerShip.playerX = (int)event.getX();
+                break;
+
+        }
+        return true;
+
+    }
 }
