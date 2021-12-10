@@ -20,7 +20,7 @@ public class GameScreen extends View {
 
     public GameScreen(Context context) {
         super(context);
-        this.context = context;
+
         background = BitmapFactory.decodeResource(getResources(),R.drawable.space);
 
         handler = new Handler();
@@ -30,6 +30,7 @@ public class GameScreen extends View {
                 invalidate();
             }
         };
+        this.context = context;
     }
 
     @Override
@@ -37,4 +38,5 @@ public class GameScreen extends View {
         super.onDraw(canvas);
         canvas.drawBitmap(background,0,0,null);
     }
+
 }

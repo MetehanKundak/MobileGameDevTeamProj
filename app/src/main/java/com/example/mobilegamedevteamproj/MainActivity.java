@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.game_start);
-        setContentView(new GameScreen(this));
+        setContentView(R.layout.game_start);
+//        setContentView(new GameScreen(this));
 
     }
 
