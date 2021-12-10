@@ -21,6 +21,7 @@ public class GameScreen extends View {
     static int dx,dy;
     Rect rectangle;
     Player playerShip;
+    Enemies enemyShip;
     long update = 30;
     public GameScreen(Context context) {
         super(context);
